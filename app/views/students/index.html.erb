@@ -1,0 +1,27 @@
+<h1>Listing of All Students</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>links</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @students.each do |student| %>
+      <tr>
+        <td><%= student.firstname %></td>
+        <td><%= student.lastname %></td>
+        <td><%= student.email %></td>
+        <td><span style="padding-right: 10px;"><%= link_to 'Add students', new_student_path %></span></td>
+        <td><span style="padding-right: 10px;"><%= link_to 'Edit student', edit_student_path(student) %></span></td>
+        <td><%= button_to 'Destroy', student_path(student), method: :delete %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+

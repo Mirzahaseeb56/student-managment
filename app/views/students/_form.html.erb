@@ -1,0 +1,20 @@
+<%= form_with model: @student do |f| %>
+    <div>
+    <%= f.label :firstname %>
+    <%= f.text_field :firstname %>
+    <br>
+    </div>
+    <div>
+    <%= f.label :lastname %>
+    <%= f.text_field :lastname%>
+    <br>
+    </div>
+    <div>
+    <%= f.label :email %>
+    <%= f.text_field :email%>
+    <br>
+    </div>
+    <div>
+    <%= f.submit  %>
+    </div>
+<% end %>
